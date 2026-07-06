@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop All — AURUM</title>
+  <meta name="description" content="Browse the full AURUM collection of luxury watches, bags, jewelry, and perfume." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><span>AURUM</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop All</a>
+        <a href="products.html?cat=Watches">Watches</a>
+        <a href="products.html?cat=Bags">Bags</a>
+        <a href="products.html?cat=Jewelry">Jewelry</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge hidden">0</span>
+        </a>
+        <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop"></div>
+
+  <main>
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="page-hero container">
+      <span class="eyebrow" data-fade>The Collection</span>
+      <h1 class="hero-heading" data-fade data-delay="0.1" id="pageTitle">Shop All</h1>
+      <div class="breadcrumb" data-fade data-delay="0.2">
+        <a href="index.html">Home</a><span>/</span><span id="crumb">Shop</span>
+      </div>
+    </section>
+
+    <!-- ============ SHOP LAYOUT ============ -->
+    <section class="container section-pad" style="padding-top:0;">
+      <div class="shop-layout">
+        <!-- Filters -->
+        <aside class="filters">
+          <div class="filter-group">
+            <h4>Category</h4>
+            <div id="filterCategories"></div>
+          </div>
+          <div class="filter-group">
+            <h4>Max Price</h4>
+            <div class="filter-price">
+              <input type="range" id="priceRange" min="200" max="7000" step="100" value="7000" />
+              <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-dim);margin-top:0.5rem;">
+                <span>$200</span>
+                <span>Up to <strong id="priceLabel" style="color:var(--text);">$7,000</strong></span>
+              </div>
+            </div>
+          </div>
+          <div class="filter-group">
+            <button class="btn btn-ghost btn-block" id="clearFilters" style="padding:0.7rem;">Clear All</button>
+          </div>
+        </aside>
+
+        <!-- Grid -->
+        <div>
+          <div class="shop-toolbar">
+            <span class="result-count" id="resultCount">0 pieces</span>
+            <select class="sort-select" id="sortSelect">
+              <option value="featured">Sort: Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name">Name: A–Z</option>
+            </select>
+          </div>
+          <div class="product-grid" id="shopGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo"><span>AURUM</span></a>
+            <p>The curated maison for fine watches, leather, jewelry &amp; fragrance. Crafted for collectors, since 1994.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="products.html?cat=Watches">Watches</a></li>
+              <li><a href="products.html?cat=Bags">Bags</a></li>
+              <li><a href="products.html?cat=Jewelry">Jewelry</a></li>
+              <li><a href="products.html?cat=Perfume">Perfume</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Craftsmanship</a></li>
+              <li><a href="#">Authenticity</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Warranty</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> AURUM Maison. All rights reserved.</span>
+          <span>Designed with intent. Built to endure.</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/listing.js"></script>
+</body>
+</html>
